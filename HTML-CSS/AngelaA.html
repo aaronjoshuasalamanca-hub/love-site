@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+
+<style>
+body{
+    margin:0;
+    background: linear-gradient(to bottom, #ffb6d9, #ff69b4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    font-family: 'Segoe UI', sans-serif;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* Soft fade-in when page loads */
+body{
+    animation: fadeInPage 2s ease forwards;
+    opacity:0;
+}
+
+@keyframes fadeInPage{
+    to{opacity:1;}
+}
+
+/* Romantic Text */
+.love-text{
+    position:absolute;
+    top:8%;
+    font-size:clamp(24px, 5vw, 42px);
+    font-weight:300;
+    letter-spacing:4px;
+    color:white;
+    text-shadow:0 4px 15px rgba(0,0,0,0.4);
+   
+    padding-bottom: 30;
+}
+    
+
+@keyframes gentleGlow{
+    0%,100%{opacity:0.9;}
+    50%{opacity:1;}
+}
+
+/* Slideshow */
+.images{
+    position:relative;
+    width:90%;
+    max-width:800px;
+    aspect-ratio:16/9;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    animation: fadeAnimation 75s infinite;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* 25 image delays */
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:3s;}
+.slide:nth-child(3){animation-delay:6s;}
+.slide:nth-child(4){animation-delay:9s;}
+.slide:nth-child(5){animation-delay:12s;}
+.slide:nth-child(6){animation-delay:15s;}
+.slide:nth-child(7){animation-delay:18s;}
+.slide:nth-child(8){animation-delay:21s;}
+.slide:nth-child(9){animation-delay:24s;}
+.slide:nth-child(10){animation-delay:27s;}
+.slide:nth-child(11){animation-delay:30s;}
+.slide:nth-child(12){animation-delay:33s;}
+.slide:nth-child(13){animation-delay:36s;}
+.slide:nth-child(14){animation-delay:39s;}
+.slide:nth-child(15){animation-delay:42s;}
+.slide:nth-child(16){animation-delay:45s;}
+.slide:nth-child(17){animation-delay:48s;}
+.slide:nth-child(18){animation-delay:51s;}
+.slide:nth-child(19){animation-delay:54s;}
+.slide:nth-child(20){animation-delay:57s;}
+.slide:nth-child(21){animation-delay:60s;}
+.slide:nth-child(22){animation-delay:63s;}
+.slide:nth-child(23){animation-delay:66s;}
+.slide:nth-child(24){animation-delay:69s;}
+.slide:nth-child(25){animation-delay:72s;}
+
+@keyframes fadeAnimation{
+    0%{opacity:0;}
+    2%{opacity:1;}
+    10%{opacity:1;}
+    12%{opacity:0;}
+    100%{opacity:0;}
+}
+/* Final Message */
+.final-message{
+    position:absolute;
+    bottom:10%;
+    font-size:clamp(18px, 4vw, 28px);
+    color:white;
+    text-align:center;
+    opacity:0;
+    transition:opacity 2s ease;
+    text-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+/* Start Screen */
+.start-screen{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(to bottom, #ffb6d9, #ff69b4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:10;
+    transition:opacity 2s ease;
+}
+
+.start-message{
+    color:white;
+    font-size:clamp(20px,5vw,36px);
+    letter-spacing:3px;
+    text-align:center;
+    animation:softPulse 2s ease-in-out infinite;
+}
+
+@keyframes softPulse{
+    0%,100%{opacity:0.7;}
+    50%{opacity:1;}
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="start-screen" id="startScreen">
+    <div class="start-message">
+        Tap anywhere to begin 💕
+    </div>
+</div>
+
+
+    <audio id= "bgMusic" autoplay loop>
+    <source src="audio1.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="love-text">I LOVE YOU</div>
+
+<div class="images">
+
+    <!-- Change class from A to slide -->
+    <div class="slide"><img src="angela/Aa (1).jpg"></div>
+    <div class="slide"><img src="angela/Aa (2).jpg"></div>
+    <div class="slide"><img src="angela/Aa (3).jpg"></div>
+    <div class="slide"><img src="angela/Aa (4).jpg"></div>
+    <div class="slide"><img src="angela/Aa (5).jpg"></div>
+    <div class="slide"><img src="angela/Aa (6).jpg"></div>
+    <div class="slide"><img src="angela/Aa (7).jpg"></div>
+    <div class="slide"><img src="angela/Aa (8).jpg"></div>
+    <div class="slide"><img src="angela/Aa (9).jpg"></div>
+    <div class="slide"><img src="angela/Aa (10).jpg"></div>
+    <div class="slide"><img src="angela/Aa (11).jpg"></div>
+    <div class="slide"><img src="angela/Aa (12).jpg"></div>
+    <div class="slide"><img src="angela/Aa (13).jpg"></div>
+    <div class="slide"><img src="angela/Aa (14).jpg"></div>
+    <div class="slide"><img src="angela/Aa (15).jpg"></div>
+    <div class="slide"><img src="angela/Aa (16).jpg"></div>
+    <div class="slide"><img src="angela/Aa (17).jpg"></div>
+    <div class="slide"><img src="angela/Aa (18).jpg"></div>
+    <div class="slide"><img src="angela/Aa (19).jpg"></div>
+    <div class="slide"><img src="angela/Aa (20).jpg"></div>
+    <div class="slide"><img src="angela/Aa (21).jpg"></div>
+    <div class="slide"><img src="angela/Aa (22).jpg"></div>
+    <div class="slide"><img src="angela/Aa (23).jpg"></div>
+    <div class="slide"><img src="angela/Aa (24).jpg"></div>
+    <div class="slide"><img src="angela/Aa (25).jpg"></div>
+
+</div>
+<script>
+const startScreen = document.getElementById("startScreen");
+const music = document.getElementById("bgMusic");
+
+startScreen.addEventListener("click", function(){
+    music.play();
+    startScreen.style.opacity = "0";
+    
+    setTimeout(function(){
+        startScreen.style.display = "none";
+    }, 2000);
+
+    // Final message timing
+    setTimeout(function(){
+        const finalMsg = document.getElementById("finalMessage");
+        if(finalMsg){
+            finalMsg.style.opacity = "1";
+        }
+    }, 75000);
+});
+</script>
+
+</body>
+</html>
+
+
